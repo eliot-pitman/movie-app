@@ -5,3 +5,9 @@
 # Actor.create(first_name: "Meryl", last_name: "Streep", known_for: "mama mia!, the iron lady, the devil wears prada, death becomes her, etc.")
 # Actor.create(first_name: "Julia", last_name: "Roberts", known_for: "pretty women, notting hill, oceans 11, erin brockovich, etc.")
 
+# 10.times do
+#   first_name = FFaker::Name.first_name_female
+#   last_name = FFaker::Name.last_name
+
+#   Actor.create(first_name:first_name, last_name:last_name)
+# end
