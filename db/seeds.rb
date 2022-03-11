@@ -6,8 +6,9 @@
 # Actor.create(first_name: "Julia", last_name: "Roberts", known_for: "pretty women, notting hill, oceans 11, erin brockovich, etc.")
 
 # 10.times do
-#   first_name = FFaker::Name.first_name_female
-#   last_name = FFaker::Name.last_name
+#   title = FFaker::Movie.title
+#   year = FFaker::Vehicle.year
+#   plot = FFaker::Book.description
 
-#   Actor.create(first_name:first_name, last_name:last_name)
+#   Movie.create(title:title,year:year,plot:plot)
 # end
