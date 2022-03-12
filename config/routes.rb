@@ -5,7 +5,12 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get "/actor" => "actors#actor"
+  get "/actor/:id" => "actors#actor"
   get "/actors_all" => "actors#all"
   get "/movies_all" => "movies#movies_all"
   get "/specific_movie/:id" => "movies#movie_id"
+  get "/includes_plot/:plot" => "movies#includes_plot"
+  get "/multiple_movies/:title_1/:title_2" => "movies#multiple_movies"
+  post "/actor/:id" => "actors#actor"
+
 end
