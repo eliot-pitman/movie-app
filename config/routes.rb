@@ -4,13 +4,19 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  get "/actor" => "actors#actor"
-  get "/actor/:id" => "actors#actor"
-  get "/actors_all" => "actors#all"
-  get "/movies_all" => "movies#movies_all"
-  get "/specific_movie/:id" => "movies#movie_id"
-  get "/includes_plot/:plot" => "movies#includes_plot"
-  get "/multiple_movies/:title_1/:title_2" => "movies#multiple_movies"
-  post "/actor/:id" => "actors#actor"
+  get "/actors" => "actors#index"
+  get "/actors/:id" => "actors#show"
+  
+  get "/movies" => "movies#index"
+  get "/movies/:id" => "movies#show"
+
+  post "/actors" => "actors#create"
+  post "/movies" => "movies#create"
+
+  patch "/actors/:id" => "actors#update"
+  patch "/movies/:id" => "movies#update"
+
+  delete "/actors/:id" => "actors#destroy"
+  delete "/movies/:id" => "movies#destroy"
 
 end

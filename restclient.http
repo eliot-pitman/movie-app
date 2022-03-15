@@ -1,3 +1,23 @@
-POST http://localhost:3000/actor/6
+POST http://localhost:3000/movies/
 Content-Type: application/json
+
+{
+  "title": "hello, dolly",
+  "year": "1997",
+  "plot": "nothing"
+}
+
+### updating actors
+PATCH http://localhost:3000/movies/14
+Content-Type: application/json
+
+{
+  "title":"goodbye, dolly",
+  "year":"1220"
+}
+
+### delete actor
+
+DELETE http://localhost:3000/movies/14
+
 
