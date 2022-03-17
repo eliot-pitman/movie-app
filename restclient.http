@@ -1,19 +1,42 @@
-POST http://localhost:3000/movies/
+POST http://localhost:3000/movies.json
 Content-Type: application/json
 
 {
-  "title": "hello, dolly",
-  "year": "1997",
-  "plot": "nothing"
+  "title": "hello,up dolly",
+  "year": "201",
+  "plot": "nothing important",
+  "director": "bob saget",
+  "english": true
+}
+
+###
+POST http://localhost:3000/actors.json
+Content-Type: application/json
+
+{
+  "first_name":"larry",
+  "last_name":"smith",
+  "known_for":"nothing",
+  "gender":"male"
 }
 
 ### updating actors
-PATCH http://localhost:3000/movies/14
+PATCH http://localhost:3000/movies/14.json
 Content-Type: application/json
 
 {
-  "title":"goodbye, dolly",
-  "year":"1220"
+  "title":"hello, dolly",
+  "year":"1220",
+  "english": "false",
+  "director": "larry"
+}
+
+###
+PATCH http://localhost:3000/actors/1.json
+Content-Type: application/json
+
+{
+  "gender":"male"
 }
 
 ### delete actor

@@ -1,34 +1,38 @@
 class ActorsController < ApplicationController
  
   def index
-    actors = Actor.all
-    render json:(actors.as_json)
+    @actors = Actor.all
+    render :index
   end
 
   def show
-    actor = params[:id]
-    actor = Actor.find(actor)
-    render json:(actor.as_json)
+    id = params[:id]
+    @actor = Actor.find(id)
+    render :show
   end
 
   def create
-    actor = Actor.create(
+    @actor = Actor.create(
       first_name: params[:first_name],
       last_name: params[:last_name],
-      known_for: params[:known_for])
+      known_for: params[:known_for],
+      gender: params[:gender],
+      age: params[:age])
 
-    render json: actor.as_json
+    render :show
     
   end
 
   def update
     id = params[:id].to_i
-    actor = Actor.find(id)
-    actor.first_name = params["first_name"] || actor.first_name
-    actor.last_name = params["last_name"] || actor.last_name
-    actor.known_for = params["known_for"] || actor.known_for
-    actor.save
-    render json: actor.as_json
+    @actor = Actor.find(id)
+    @actor.first_name = params["first_name"] || @actor.first_name
+    @actor.last_name = params["last_name"] || @actor.last_name
+    @actor.known_for = params["known_for"] || @actor.known_for
+    @actor.gender = params["gender"] || @actor.gender
+    @actor.age = params["age"] || @actor.age
+    @actor.save
+    render :show
   end
 
   def destroy
