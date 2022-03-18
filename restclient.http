@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
   "title": "hello,up dolly",
-  "year": "201",
+  "year": 2011,
   "plot": "nothing important",
   "director": "bob saget",
   "english": true
@@ -14,10 +14,11 @@ POST http://localhost:3000/actors.json
 Content-Type: application/json
 
 {
-  "first_name":"larry",
-  "last_name":"smith",
-  "known_for":"nothing",
-  "gender":"male"
+  "first_name":"l",
+  "last_name":"snider",
+  "gender":"male",
+  "age":"13",
+  "known_for":"something"
 }
 
 ### updating actors
@@ -25,18 +26,19 @@ PATCH http://localhost:3000/movies/14.json
 Content-Type: application/json
 
 {
-  "title":"hello, dolly",
-  "year":"1220",
+  "title":"l",
+  "year":"1222",
   "english": "false",
   "director": "larry"
 }
 
 ###
-PATCH http://localhost:3000/actors/1.json
+PATCH http://localhost:3000/actors/2.json
 Content-Type: application/json
 
 {
-  "gender":"male"
+  "gender":"male",
+  "age": 12
 }
 
 ### delete actor
