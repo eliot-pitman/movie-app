@@ -5,7 +5,9 @@
     last_name: actor.last_name,
     known_for: actor.known_for,
     gender: actor.gender,
-    age: actor.age
+    age: actor.age,
+    movie_id: actor.movie_id,
+    movie: actor.movie
     # url: actor_url(actor, format: :json)
   }
 end

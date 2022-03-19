@@ -6,5 +6,6 @@
   director: @movie.director,
   english: @movie.english,
   created_at: @movie.created_at,
-  updated_at: @movie.updated_at
+  updated_at: @movie.updated_at,
+  actors: @movie.actors
 }

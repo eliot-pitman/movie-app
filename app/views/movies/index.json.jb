@@ -5,7 +5,8 @@
     year: movie.year,
     plot: movie.plot,
     director: movie.director,
-    english: movie.english
+    english: movie.english,
+    actors: movie.actors
     # url: movie_url(movie, format: :json)
   }
 end
