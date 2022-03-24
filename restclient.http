@@ -1,3 +1,5 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDgxODQ2NzR9.soxNiX6W5zN8qMoP1_0-IwwhV8xdctJAVthpr4ynbCs
+
 POST http://localhost:3000/movies.json
 Content-Type: application/json
 
@@ -21,15 +23,13 @@ Content-Type: application/json
   "known_for":"something"
 }
 
-### updating actors
-PATCH http://localhost:3000/movies/14.json
+### updating movies
+PATCH http://localhost:3000/actors/14.json
 Content-Type: application/json
+Authorization: Bearer {{jwt}}
 
 {
-  "title":"l",
-  "year":"1222",
-  "english": "false",
-  "director": "larry"
+  "last_name":"pitman"
 }
 
 ###
@@ -45,4 +45,29 @@ Content-Type: application/json
 
 DELETE http://localhost:3000/movies/14
 
+
+### users create (sign up)
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name":"larry",
+  "email":"larry@example.com",
+  "password":"password",
+  "password_confirmation":"password"
+}
+
+### login
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email":"bob@example.com",
+  "password":"password"
+}
+
+### index
+GET http://localhost:3000/movies.json
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
 
