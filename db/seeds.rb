@@ -36,3 +36,12 @@
 #   {title: "hello, dolly", year: 1997, plot: "nothing"}
 # ])
 
+
+# 10.times do 
+#   genre = FFaker::Book.genre
+#   Genre.create(name: genre)
+# end
+# 10.times do
+#   MovieGenre.create(movie_id:(rand(11)),genre_id:(rand(11)))
+# end
+
