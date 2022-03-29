@@ -71,3 +71,11 @@ GET http://localhost:3000/movies.json
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
+### create moviegenre 
+POST http://localhost:3000/movie_genres
+Content-Type: application/json
+
+{
+  "movie_id":3,
+  "genre_id":3
+}
