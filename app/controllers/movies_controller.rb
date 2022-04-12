@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-  before_action :authenticate_user && :authenticate_admin, except: [:index, :show]
+  # before_action :authenticate_user && :authenticate_admin, except: [:index, :show]
   def index
     @movies = Movie.all
     render :index
